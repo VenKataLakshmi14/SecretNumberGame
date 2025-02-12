@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html style="background-color: skyblue;">
+<head>
+    <title>Guess</title>
+</head>
+<body>
+    <center>
+        <h1>Guess the Number!</h1>
+        <form method="POST" action="/guess">
+            <label for="guess">Enter your guess (1-10):</label>
+            <input type="number" id="guess" name="guess" min="1" max="10" required>
+            <br><br>
+            <button type="submit">Submit Guess</button>
+        </form>
+        {% if remaining is not none %}
+            <p>You have {{ remaining }} guesses left.</p>
+        {% endif %}
+        <br>
+        <a href="{{ url_for('logout') }}">
+            <button style="background-color: red; color: white;">Logout</button>
+        </a>
+    </center>
+</body>
+</html>

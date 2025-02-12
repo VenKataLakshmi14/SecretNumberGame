@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html style="background-color: skyblue;">
+<head>
+    <title>You Win!</title>
+</head>
+<body>
+    <center>
+        <h1>Congratulations! You guessed the correct number!</h1>
+        <br>
+        <a href="{{ url_for('index') }}">
+            <button>Play Again</button>
+        </a>
+        <br><br>
+        <a href="{{ url_for('logout') }}">
+            <button style="background-color: red; color: white;">Logout</button>
+        </a>
+    </center>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html style="background-color: skyblue;">
+<head>
+    <title>You Lost</title>
+</head>
+<body>
+    <center>
+        <h1>Game Over! You ran out of guesses.</h1>
+        <p>The correct number was {{ old_secret_number }}.</p>
+        <br>
+        <a href="{{ url_for('index') }}">
+            <button>Play Again</button>
+        </a>
+        <br><br>
+        <a href="{{ url_for('logout') }}">
+            <button style="background-color: red; color: white;">Logout</button>
+        </a>
+    </center>
+</body>
+</html>
